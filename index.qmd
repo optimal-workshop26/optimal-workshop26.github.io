@@ -1,0 +1,202 @@
+---
+title: "OPTIMAL: Optimisation and Post-Bayesian Inference in Machine Learning"
+subtitle: "05 May 2026, Tangier, Morocco"
+image: post-bayes.jpg
+---
+
+```{r}
+#| echo: false
+#| include: false
+library(tidyverse)
+library(gt)
+library(tibble)
+library(dplyr)
+```
+
+# Welcome!
+
+The aim of probabilistic machine learning is to find accurate representations of our uncertain beliefs about the world and use them to make better informed decisions. This workshop brings together post-Bayesian approaches to inference and optimisation-based perspectives on uncertainty and decision-making. Post-Bayesian methods address the limitations of classical Bayesian inference by developing alternative inferential principles that remain robust in modern machine-learning settings, where standard modelling assumptions may be violated. Complementing this view, optimisation-based approaches treat inference and decision-making as problems of optimising functionals of probability distributions, providing a unifying framework for both learning probabilistic representations and acting upon them. This workshop welcomes all theoretical and methodological work on how best to represent, find and use probabilistic beliefs about the world.
+
+# Call for Papers {#sec:cfp}
+
+We invite short papers submissions on all theoretical and methodological work on how best to represent, find and use probabilistic beliefs about the world.
+
+>Please submit your paper through [OpenReview](https://openreview.net/)
+
+
+### Submission details
+
+Submissions should be formatted using the **AISTATS LaTeX style**. Papers are limited to **4 pages (excluding references)**. The review process will be **double-blind**. Accepted contributions will be presented as **posters**, and selected works will also be highlighted as contributed talks.
+
+
+### Key dates
+The important deadlines are listed below.
+```{r}
+#| echo: false
+data <- 
+  tibble(
+    date = c("2026-01-30",
+             "2026-02-13",
+             "2026-02-27",
+             "2026-05-05"),
+    event = c("Submissions open",
+              "Submissions close",
+              "Decisions announced",
+              "Workshop begins")
+  )
+
+# make table
+data |> 
+  gt() |>
+  fmt_date(col = "date",
+           date_style = "wd_m_day_year") |>
+  cols_align(align = "left") |>
+  tab_options(column_labels.hidden = TRUE) |>
+  # strike through events in the past
+  tab_style(
+    style = cell_text(decorate = "line-through"),
+    locations = cells_body(
+      columns = event,
+      rows = date <= Sys.Date()
+    )
+  )
+```
+# Keynote speakers{#sec:speakers}
+
+All presenters are listed in alphabetical order.
+
+::: {.columns}
+::: {.column width="50%"}
+
+**[Andrew Gordon Wilson](https://cims.nyu.edu/~andrewgw/)**  
+New York University
+
+**[Anna Korba](https://akorba.github.io/)**  
+ENSAE / CREST
+
+**[Chris Oates](https://oates.work/)**  
+Newcastle University
+
+**[Edwin Fong](https://edfong.github.io/)**  
+University of Hong Kong
+
+:::
+::: {.column width="50%"}
+
+**[Geoff Pleiss](https://geoffpleiss.com/)**  
+University of British Columbia
+
+**[Maria Skoularidou](https://scholar.google.com/citations?user=Lkm90i8AAAAJ)**  
+The Broad Institute
+
+**[Phebe Vayanos](https://sites.google.com/usc.edu/phebevayanos/home)**  
+University of Southern California
+
+**[Pierre Alquier](https://pierrealquier.github.io/)**  
+ESSEC Asia-Pacific
+
+:::
+:::
+
+# Schedule {#sec:schedule}
+
+```{r}
+#| echo: false
+
+sched <- tibble(
+  time = c(
+    "09:15–09:30",
+    "09:30–10:00",
+    "10:00–10:30",
+    "10:30–11:00",
+    "11:00–11:30",
+    "11:30–12:00",
+    "12:00–13:00",
+    "13:00–14:30",
+    "14:30–15:00",
+    "15:00–15:30",
+    "15:30–16:00",
+    "16:00–16:55",
+    "16:55–17:00"
+  ),
+  type = c(
+    "Opening Remarks",
+    "Invited Talk",
+    "Contributed Talks",
+    "Coffee",
+    "Invited Talk",
+    "Invited Talk",
+    "Lunch",
+    "Poster Session",
+    "Invited Talk",
+    "Coffee",
+    "Contributed Talks",
+    "Panel Discussion",
+    "Closing Remarks"
+  ),
+  speakers = c(
+    "Organisers",
+    "Anna Korba",
+    NA,
+    NA,
+    "Pierre Alquier",
+    "Phebe Vayanos",
+    NA,
+    NA,
+    "Edwin Fong",
+    NA,
+    NA,
+    "Andrew Gordon Wilson<br>Chris Oates<br>Geoff Pleiss<br>Maria Skoularidou",
+    "Organisers"
+  )
+)
+
+sched |>
+  gt() |>
+  sub_missing(missing_text = "") |>
+  fmt_markdown(columns = "speakers") |>
+  cols_label(
+    time = "Time",
+    type = "Event",
+    speakers = "Speaker"
+  ) |>
+  cols_align(align = "left", columns = c("time", "type", "speakers")) |>
+  cols_width(
+    time ~ px(260),
+    type ~ pct(45),
+    speakers ~ pct(35)
+  ) |>
+  opt_row_striping() |>
+  tab_options(
+    row.striping.background_color = "#f3f4f6",
+    table.border.top.style = "solid",
+    table.border.top.width = px(1),
+    table.border.top.color = "black",
+    table.border.bottom.style = "solid",
+    table.border.bottom.width = px(2),
+    table.border.bottom.color = "black",
+    column_labels.border.bottom.style = "solid",
+    column_labels.border.bottom.width = px(2),
+    column_labels.border.bottom.color = "black",
+    data_row.padding = px(14)
+  )
+
+
+
+```
+
+
+# Organisers{#sec:organaisers}
+
+- [Calvin Tsay](https://www.doc.ic.ac.uk/~ctsay/) (Imperial College London)
+- [Harita Dellaporta](https://haritadell.github.io/) (UCL)
+- [James Odgers](https://jamesacodgers.github.io/) (Helmholtz AI)
+- [Jeremias Knoblauch](https://jeremiasknoblauch.github.io/) (UCL) 
+- [Kamelia Daudel](https://kdaudel.github.io/) (ESSEC Business School)
+- [Matías Altamirano](https://maltamiranomontero.github.io/) (UCL)
+- [Ryan-Rhys Griffiths](https://ryan-rhys.com/)
+- [Sarah Filippi](https://sarahfilippi.github.io/) (Imperial College London) 
+- [Thomas Möllenhoff](https://moellenh.github.io/) (RIKEN)
+- [Vincent Fortuin](https://fortuin.github.io/) (Helmholtz AI & TU Munich)
+- [Yann McLatchie](https://yannmclatchie.github.io/) (UCL) 
+

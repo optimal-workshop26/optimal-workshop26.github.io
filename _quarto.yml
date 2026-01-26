@@ -1,0 +1,12 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "optimal"
+
+format:
+  html:
+    theme: pandoc
+    css: styles.css
+    
