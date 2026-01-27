@@ -21,7 +21,7 @@ The aim of probabilistic machine learning is to find accurate representations of
 
 We invite short papers submissions on all theoretical and methodological work on how best to represent, find and use probabilistic beliefs about the world.
 
->Please submit your paper through [OpenReview](https://openreview.net/)
+>Please submit your paper through [OpenReview](https://openreview.net/group?id=aistats.org/AISTATS/2026/Workshop/OPTIMAL)
 
 
 ### Submission details
