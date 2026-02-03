@@ -35,9 +35,9 @@ The important deadlines are listed below.
 #| echo: false
 data <- 
   tibble(
-    date = c("2026-01-30",
-             "2026-02-13",
+    date = c("2026-02-06",
              "2026-02-27",
+             "2026-03-18",
              "2026-05-05"),
     event = c("Submissions open",
               "Submissions close",
