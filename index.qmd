@@ -35,7 +35,7 @@ The important deadlines are listed below.
 #| echo: false
 data <- 
   tibble(
-    date = c("2026-02-06",
+    date = c("2026-01-30",
              "2026-02-27",
              "2026-03-18",
              "2026-05-05"),
@@ -63,7 +63,9 @@ data |>
 ```
 # Keynote speakers{#sec:speakers}
 
-All presenters are listed in alphabetical order.
+Speakers will be announced soon!
+
+<!-- All presenters are listed in alphabetical order.
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -77,9 +79,6 @@ ENSAE / CREST
 **[Chris Oates](https://oates.work/)**  
 Newcastle University
 
-**[Edwin Fong](https://edfong.github.io/)**  
-University of Hong Kong
-
 :::
 ::: {.column width="50%"}
 
@@ -89,14 +88,11 @@ University of British Columbia
 **[Maria Skoularidou](https://scholar.google.com/citations?user=Lkm90i8AAAAJ)**  
 The Broad Institute
 
-**[Phebe Vayanos](https://sites.google.com/usc.edu/phebevayanos/home)**  
-University of Southern California
-
 **[Pierre Alquier](https://pierrealquier.github.io/)**  
 ESSEC Asia-Pacific
 
 :::
-:::
+::: -->
 
 # Schedule {#sec:schedule}
 
@@ -136,17 +132,17 @@ sched <- tibble(
   ),
   speakers = c(
     "Organisers",
-    "Anna Korba",
     NA,
     NA,
-    "Pierre Alquier",
-    "Phebe Vayanos",
     NA,
     NA,
-    "Edwin Fong",
     NA,
     NA,
-    "Andrew Gordon Wilson<br>Chris Oates<br>Geoff Pleiss<br>Maria Skoularidou",
+    NA,
+    NA,
+    NA,
+    NA,
+    NA,
     "Organisers"
   )
 )
